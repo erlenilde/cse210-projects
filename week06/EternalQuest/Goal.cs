@@ -17,8 +17,22 @@ public abstract class Goal
     public abstract bool IsComplete();
     public virtual string GetDetailsString()
     {
-        return "";
+        string checkbox = IsComplete() ? "[X]" : "[ ]";
+        return $"{checkbox} {_shortName} ({_description})";
     }
    
     public abstract string GetStringRepresentation();
+
+    public string GetName()
+    {
+        return _shortName;
+    } 
+    public string GetDescription()
+    {
+        return _description;
+    } 
+    public int GetPoints()
+    {
+        return _points;
+    } 
 }
