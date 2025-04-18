@@ -1,9 +1,9 @@
 public abstract class Activity
 {
     private string _date;
-    private float _length;
+    private double _length;
 
-    public Activity(string date, float length)
+    public Activity(string date, double length)
     {
         _date = date;
         _length = length;
@@ -14,14 +14,14 @@ public abstract class Activity
         return _date;
     }
 
-    public float GetLength()
+    public double GetLength()
     {
         return _length;
     }
 
-    public abstract float GetDistance();
-    public abstract float GetSpeed();
-    public abstract float GetPace();
+    public abstract double GetDistance();
+    public abstract double GetSpeed();
+    public abstract double GetPace();
     public virtual string GetSummary()
     {
         return "";

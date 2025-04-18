@@ -1,23 +1,23 @@
 public class Cycling : Activity
 {
-    private float _speed;
+    private double _speed;
 
-    public Cycling(string date, float length, float speed) : base(date, length)
+    public Cycling(string date, double length, double speed) : base(date, length)
     {
         _speed = speed;
     }
 
-    public override float GetDistance()
+    public override double GetDistance()
     {
         return _speed * GetLength() / 60;
     }
 
-    public override float GetSpeed()
+    public override double GetSpeed()
     {
         return _speed;
     }
 
-    public override float GetPace()
+    public override double GetPace()
     {
         return GetLength() / GetDistance();
     }
